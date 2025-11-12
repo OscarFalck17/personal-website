@@ -14,12 +14,16 @@
 }
 
 .app.sidebar-collapsed {
-  margin-left: 50px;
+  margin-left: 3vw;
 }
 
 @media (min-width: 769px) {
   .app {
     margin-left: max(10vw, 150px);
+  }
+  
+  .app.sidebar-collapsed {
+    margin-left: max(3vw, 60px);
   }
 }
 

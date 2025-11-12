@@ -4,20 +4,23 @@
   min-height: 100vh;
   background-color: #1a1a1a;
   padding: 2rem 1.5rem;
+  padding-bottom: 4rem;
   border-right: 1px solid #333;
   position: fixed;
   left: 0;
   top: 0;
   overflow-y: auto;
-  transition: width 0.3s ease, min-width 0.3s ease;
+  overflow-x: hidden;
+  transition: width 0.3s ease, min-width 0.3s ease, padding 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .sidebar.collapsed {
-  width: 50px;
-  min-width: 50px;
+  width: 3vw;
+  min-width: 60px;
   padding: 1rem 0.5rem;
+  padding-bottom: 4rem;
 }
 
 .sidebar-toggle {
@@ -73,6 +76,24 @@
   line-height: 1.4;
 }
 
+.sidebar-section-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.sidebar-section-icon .icon {
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-section-icon .icon:hover {
+  transform: scale(1.2);
+}
+
 @media (prefers-color-scheme: light) {
   .sidebar {
     background-color: #f5f5f5;
@@ -97,6 +118,7 @@
     min-height: auto;
     border-right: none;
     border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
   }
   
   .sidebar.collapsed {
@@ -110,5 +132,15 @@
     bottom: auto;
     right: auto;
     margin: 1rem auto 0;
+  }
+  
+  .sidebar.collapsed nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .sidebar.collapsed .sidebar-section-icon {
+    margin-bottom: 0;
   }
 }

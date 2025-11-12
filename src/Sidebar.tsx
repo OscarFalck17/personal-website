@@ -17,7 +17,21 @@ function Sidebar({ onToggle }: SidebarProps) {
   return (
     <aside className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
       <nav>
-        {!isCollapsed && (
+        {isCollapsed ? (
+          <>
+            <section className="sidebar-section-icon" title="Education">
+              <span className="icon">🎓</span>
+            </section>
+            
+            <section className="sidebar-section-icon" title="Current Work">
+              <span className="icon">💼</span>
+            </section>
+            
+            <section className="sidebar-section-icon" title="Certificates">
+              <span className="icon">📜</span>
+            </section>
+          </>
+        ) : (
           <>
             <section className="sidebar-section">
               <h2>Education</h2>
