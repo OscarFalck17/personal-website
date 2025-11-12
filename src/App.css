@@ -5,10 +5,22 @@
 
 .app {
   flex: 1;
-  margin-left: 250px;
+  margin-left: 10vw;
+  min-width: 0;
   max-width: 1280px;
   padding: 2rem;
   text-align: center;
+  transition: margin-left 0.3s ease;
+}
+
+.app.sidebar-collapsed {
+  margin-left: 50px;
+}
+
+@media (min-width: 769px) {
+  .app {
+    margin-left: max(10vw, 150px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -17,6 +29,10 @@
   }
   
   .app {
+    margin-left: 0;
+  }
+  
+  .app.sidebar-collapsed {
     margin-left: 0;
   }
 }
