@@ -23,10 +23,14 @@
   padding-bottom: 4rem;
 }
 
+.sidebar.collapsed .sidebar-toggle {
+  left: max(calc(3vw - 48px), 12px);
+}
+
 .sidebar-toggle {
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
-  right: 0.5rem;
+  left: max(calc(10vw - 48px), 102px);
   background-color: #646cff;
   color: white;
   border: none;
@@ -38,7 +42,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, left 0.3s ease;
   z-index: 10;
 }
 
