@@ -19,15 +19,15 @@ function Sidebar({ onToggle }: SidebarProps) {
       <nav>
         {isCollapsed ? (
           <>
-            <section className="sidebar-section-icon" title="Education">
+            <section className="sidebar-section-icon" title="Education" onClick={handleToggle}>
               <span className="icon">🎓</span>
             </section>
             
-            <section className="sidebar-section-icon" title="Current Work">
+            <section className="sidebar-section-icon" title="Current Work" onClick={handleToggle}>
               <span className="icon">💼</span>
             </section>
             
-            <section className="sidebar-section-icon" title="Certificates">
+            <section className="sidebar-section-icon" title="Certificates" onClick={handleToggle}>
               <span className="icon">📜</span>
             </section>
           </>
